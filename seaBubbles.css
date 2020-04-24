@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  background: rgb(14, 64, 115);
+  background: linear-gradient(
+    20deg,
+    rgb(11, 52, 94) 34%,
+    rgba(42, 116, 153, 1) 72%,
+    rgba(17, 202, 208, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.3em;
+  font-family: "Indie Flower", sans-serif;
+  letter-spacing: 3px;
+  margin: 1em;
+  top: 40px;
+  position: absolute;
+  transform: rotate(-30deg);
+  /* animation: float 10s linear alternate infinite; */
+}
+
+.bubbles {
+  box-shadow: inset 1px 1px 5px white;
+  cursor: pointer;
+  background: rgba(245, 247, 164, 0.05);
+  border: 0.04em solid rgba(255, 255, 255, 0.2);
+  border-color: rgba(228, 125, 46, 0.5);
+  border-radius: 50%;
+  animation: bubble 10s linear infinite;
+  position: absolute;
+  top: 101%;
+}
+
+.bubbles:after {
+  content: "";
+  width: 60%;
+  height: 60%;
+  border-top: 1px solid rgba(53, 220, 164, 0.5);
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+@keyframes bubble {
+  0% {
+    top: 101%;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  10% {
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-2%);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(-2%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-2%);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-2%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  100% {
+    top: -10%;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.seaweed {
+  box-shadow: inset 1px 1px 1px rgb(7, 68, 31);
+  position: fixed;
+  bottom: 0;
+  left: 40%;
+  width: 5px;
+  height: 175px;
+  background: linear-gradient(to top, rgb(103, 25, 1) 25%, rgb(232, 97, 7));
+  border-radius: 50% 50% 0% 0%;
+  transform-origin: bottom center;
+  animation: seaweed 10s linear infinite;
+}
+
+@keyframes seaweed {
+  25% {
+    transform: skewX(10deg);
+  }
+  75% {
+    transform: skewX(-10deg);
+  }
+}
+
+#creature {
+  animation: float 10s linear alternate infinite;
+  width: 20vw;
+  height: 20vw;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 25%;
+  right: 50%;
+  transform: translateX(150px);
+  background-color: #600b3a;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 10 12c1.67 0 3.182-.683 4.27-1.785A5.998 5.998 0 0 0 14 12h2a4 4 0 0 1 4-4V6c-1.67 0-3.182.683-4.27 1.785C15.905 7.22 16 6.622 16 6c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 20 6V4a4 4 0 0 1-4-4h-2c0 .622.095 1.221.27 1.785A5.982 5.982 0 0 0 10 0C8.33 0 6.818.683 5.73 1.785 5.905 1.22 6 .622 6 0H4a4 4 0 0 1-4 4v2c1.67 0 3.182.683 4.27 1.785A5.998 5.998 0 0 1 4 6c0-.622.095-1.221.27-1.785A5.982 5.982 0 0 1 0 6v2a4 4 0 0 1 4 4h2zm-4 0a2 2 0 0 0-2-2v2h2zm16 0a2 2 0 0 1 2-2v2h-2zM0 2a2 2 0 0 0 2-2H0v2zm20 0a2 2 0 0 1-2-2h2v2zm-10 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' fill='%23ab337d' fill-opacity='0.95' fill-rule='evenodd'/%3E%3C/svg%3E");
+  box-shadow: 1px 1px 20px rgb(142, 147, 119);
+  border-radius: 50% 50% 10% 50%;
+}
+#creature * {
+  border-radius: 50%;
+}
+.eye {
+  width: 25%;
+  height: 25%;
+  background: #fff;
+  position: absolute;
+  top: 20%;
+  box-shadow: inset 1px 1px 5px #000000;
+}
+.left.eye {
+  left: 20%;
+}
+.right.eye {
+  right: 20%;
+}
+.pupil {
+  background: #000000;
+  width: 60%;
+  height: 60%;
+  position: relative;
+  left: 25%;
+  transform-origin: bottom;
+  box-shadow: inset 4px 4px 8px#83a9eb;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(250px);
+  }
+  100% {
+    transform: translatey(150px);
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  body {
+    margin: 0;
+    width: 100vw;
+  }
+  p {
+    font-size: 3em;
+  }
+}
