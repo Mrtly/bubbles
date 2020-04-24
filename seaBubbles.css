@@ -173,10 +173,17 @@ p {
 
 @media screen and (max-device-width: 768px) {
   body {
-    margin: 0;
-    width: 100vw;
+    background: #074b52;
   }
   p {
     font-size: 3em;
+  }
+  #creature {
+    width: 30vw;
+    height: 30vw;
+    bottom: 15%;
+  }
+  .bubbles {
+    top: 120%;
   }
 }
