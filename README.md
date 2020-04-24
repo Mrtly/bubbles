@@ -2,7 +2,7 @@
 
 ### with JavaScript & CSS
 
-### visit [deepsea.surge.sh](https://deepsea.surge.sh/)
+### visit [deepsea.surge.sh](https://deepsea.surge.sh/)  [***desktop only, may not work on mobile***]
 
 ##### looks like this
 
